@@ -45,22 +45,35 @@ print(virginica_count)
 print("Rows with Sepal lengths greater than 3.5: ")
 for x in range(totalrows):
     if data.iloc[x,1]>3.5:
-        print("row number: ",x)
-        print(data.iloc[x,:])
+        print('row: ',x)
+        #print(data.iloc[x,:])
         
 
 # writes the data for the species "setosa" into a comma delimited file 
 # named setosa.csv
 setosa=pandas.DataFrame(columns=['Sepal.Length','Sepal.Width','Petal.Length','Petal.Width','Species'])
-print(setosa)
 for x in range(totalrows):
     if data.iloc[x,4]=="setosa":
         setosa.loc[x]=data.iloc[x,:]
 
-setosa.to_csv('setosa.csv',header=False,index=False,sep=" ")
+setosa.to_csv('setosa.csv',header=True,index=False,sep=",")
+# header=True so that the headings for the olumns of the DataFrame are added to the .csv file
 # uses the sorted data and saves it in a .csv file with space as delimiter
-        
-        
+
+# Calculate the mean, minimum, and maximum Petal.Length for virginica observations
+virginicaList=list()
+for x in range(totalrows):
+    if data.iloc[x,4]=="virginica":
+        virginicaList.append(data.iloc[x,2])
+
+#virginicaSum=virginicaList.sum()
+#virginicaLength=virginicaList.len()
+virginicaMean=sum(virginicaList)/len(virginicaList)
+virginicaMin=min(virginicaList)
+virginicaMax=max(virginicaList)
+print("the mean petal length for virginica species is:",virginicaMean)
+print("the minimum petal length for virginica species is:",virginicaMin)
+print("the maximum petal length for virginica species is:",virginicaMax)
         
         
         
