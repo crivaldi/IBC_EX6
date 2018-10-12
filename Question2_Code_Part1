@@ -1,0 +1,4 @@
+iris = pd.read_csv('iris.csv') #need to import pandas as pd first
+iris.shape
+lasttwo = iris.iloc[148:150,3:5] #I use shape function to inform what numbers to input here
+print('content in last two rows and columns:', lasttwo)

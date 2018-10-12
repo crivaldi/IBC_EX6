@@ -1,0 +1,10 @@
+virginica = iris[iris.Species=="virginica"]
+virginica2 = virginica.iloc[:,4]
+print('total number of virginica observations:', virginica2.shape)
+vers = iris[iris.Species=="versicolor"]
+vers2 = vers.iloc[:,4]
+print('total number versicolor observations:', vers2.shape)
+set = iris[iris.Species=="setosa"]
+set2 = set.iloc[:,4]
+print('total number setosa observations:', set2.shape)
+
