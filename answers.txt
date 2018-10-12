@@ -1,0 +1,22 @@
+# Number 1
+iris=pandas.read_csv("iris.csv")
+iris.head(n=5)
+
+# Number 2
+#print last two rows and columns
+print(iris.iloc[148:150,3:5])
+
+#Get number of observations for each species included in the data set
+iris.loc[:,'Species']
+species_count.value_counts()
+
+#get rows with Sepal.Width > 3.5
+iris[iris["Sepal.Width"]>3.5
+
+#write the data for the species setosa to a comma-delimited file names'setosa.csv'
+data=iris[iris['Species'].str.match('setosa')]
+data=.to_csv('irisdf.csv')
+
+#calculate the mean, minimum, and maximum of Petal.Length for observations from virginica
+subset=iris[iris['Species'].str.match('virginica')]
+subset.describe()
