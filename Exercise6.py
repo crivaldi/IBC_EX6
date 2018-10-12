@@ -64,7 +64,6 @@ data4b = data4.to_csv('setosa.csv') #exporting above rows to new .csv file
 ##Part 5##
 data5 = data.loc[data['Species'] == "virginica"]
 data5a = data5.iloc[:,-3]
-print data5a
 data5avg = data5a.mean()
 print data5avg #Usage: print data5avg
 data5min = data5a.min()
