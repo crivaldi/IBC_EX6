@@ -1,0 +1,5 @@
+file = pandas.read_csv("wages.csv")
+Q = 6 #Q is equal to last desired line +1, i.e. Q=6 to get up to 5th row of data
+filter1 = file.iloc[0:Q,:]
+print(filter1)
+

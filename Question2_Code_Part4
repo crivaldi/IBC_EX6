@@ -1,0 +1,5 @@
+set = iris[iris.Species=="setosa"]
+import sys
+sys.stdout = open['setosa.csv', 'w')
+print(set) #stdout from this command will be redirected into new setosa.csv file created
+

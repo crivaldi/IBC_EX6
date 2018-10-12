@@ -1,0 +1,9 @@
+virginica = iris[iris.Species=="virginica"]
+virginicaPL = virginica.iloc[:,2]
+print(max(virginicaPL))
+print(min(virginicaPL))
+blerp = virginicaPL.count
+flerg = sum(virginicaPL)
+blahh = (flerg)//(blerp)
+print(blahh) #final line prints the mean value
+

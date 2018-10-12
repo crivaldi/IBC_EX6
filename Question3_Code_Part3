@@ -1,0 +1,3 @@
+sepal = iris.loc[iris['Sepal.Width']>3.5]
+print('sepal width over 3.5:', sepal) #I use .loc for Boolean/logical arguments
+
